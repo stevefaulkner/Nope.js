@@ -1,523 +1,351 @@
-<html><head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<title>html5 interactive controls</title>
-
-<style type="text/css">
-
-body
-
-
-
-{
-
-
-
-	font: normal 85%  arial, Verdana, helvetica, sans-serif;
-
-
-
-	color: #333;
-
-
-
-	background: #fff;
-
-
-
-	padding: 0 1em;
-
-
-
-}
-
-
-
-caption {text-align:left;font-weight:bold;font-size:large}
-
-
-
-h1, h2
-
-
-
-{
-
-
-
-	color: #630;
-
-
-
-	background: #fff;
-
-
-
-	padding-bottom: 0.5em;
-
-
-
-	margin-bottom: 0;
-
-
-
-}
-
-
-
-
-
-
-
-table
-
-
-
-{
-
-
-
-	/*border-collapse: collapse;
-
-
-
-	border: 1px solid #630;*/
-
-	
-
-font: normal 90% arial, Verdana, helvetica, sans-serif;
-
-}
-
-
-
-
-
-
-
-th, td
-
-
-
-{
-
-
-
-	text-align: left;
-
-
-
-	vertical-align: top;
-
-
-
-	padding: 0.3em;
-
-	margin:2px;
-
-
-
-	/*border: 1px solid #630;*/
-
-	background-color:#f5f5f5;
-
-
-
-}
-
-
-
-td h1 {font-size:85%;margin:0 0 0 0;}
-
-
-
-thead th, thead td
-
-
-
-{
-
-
-
-	font-weight: bold;
-
-background-color:#f5f5f5;
-
-	text-align: center;
-
-
-
-}
-
-
-
-td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
-
-
-
-caption {text-align:left}
-
-
-
-
-
-td.support {background:#90ee90;}
-
-	td.partial {background:#eee8aa;}
-
-	td.nosupport{background:#ffb6c1;}
-
-	
-
-
-
-	td p.note{border: 1px dashed red;padding: 5px;margin-top:5px;background:#FFFFFF}
-
-.new {
-
-	font-size: 1em;
-
-	background-color: #FF0;
-
-	
-
-}
-
-</style>
-
-</head>
-
-
-
-<body>
-<h1> Nope.js UI library</h1>
-
-<form action="">
-
-<table id="results">
-    <tbody><tr>
-
-      <td><button>button element</button>		</td>
-
-    </tr>
-
-    <tr>
-
-      <td>input type=button <input type="button" value="input button"></td>
-
-    </tr>
-
-    <tr>
-
-      <td><input type="checkbox" value="" id="ch">
-
-          <label for="ch">type="checkbox"</label></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label> file input <input type="file"></label></td>
-
-    </tr>
-
-    <tr>
-
-      <td>input type='image' <input name="" type="image" src="http://www.html5accessibility.com/images/tick.png" alt="input type='image'"></td>
-
-    </tr>
-
-	<tr>
-
-	  <td><p><label for="text0">type="text" required</label>
-
-	    <input type="text" id="text0" required=""> </p>
-
-		<p><label for="text01">type="text" required 2</label>
-
-	    <input type="text" id="text01" required=""></p>
-
-	    
-
-	    <p><input type="submit" value="submit"></p></td>
-
-	  </tr>
-
-	<tr>
-
-      <td><label for="text1">type="text" with placeholder</label>
-
-          <input type="text" id="text1" placeholder="some text">  
-
-          <span class="new">new</span></td>
-
-    </tr>
-
-	<tr><td> <label for="form-2">Text with Datalist</label>
-
-        <input id="form-2" list="mylist" type="text">
-
-        <datalist id="mylist">
-
-		<option label="Miss" value="Miss">
-
-            </option><option label="Mr" value="Mr">
-
-            </option><option label="Ms" value="Ms">
-
-            </option><option label="Prof" value="Mad Professor"> 
-
-          </option></datalist><span class="new">new</span> </td></tr>
-
-    <tr>
-
-      <td><label for="pass">type="password"</label>
-
-          <input type="password" id="pass"></td>
-
-    </tr>
-
-    <tr>
-
-      <td><input type="radio" id="radio" value="">
-
-          <label for="radio">type="radio"</label></td>
-
-    </tr>
-
-    <tr>
-
-      <td><input type="reset"></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label>textarea element
-
-        <textarea name="textarea" cols="10" rows="2" placeholder="some text"></textarea>
-
-        <span class="new">new</span></label></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="search">type="search"</label>
-
-        <input type="search" id="search">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="mail">type="email"</label>
-
-        <input type="email" id="mail">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="t">type="tel"</label>
-
-        <input type="tel" id="t">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="url">type="URL"</label>
-
-       <input type="url" name="location" id="url" list="urls">
-
-<datalist id="urls">
-
- <option label="MIME: Format of Internet Message Bodies" value="http://tools.ietf.org/html/rfc2045">
-
- </option><option label="HTML 4.01 Specification" value="http://www.w3.org/TR/html4/">
-
- </option><option label="Form Controls" value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">
-
- </option><option label="Scalable Vector Graphics (SVG) 1.1 Specification" value="http://www.w3.org/TR/SVG/">
-
- </option><option label="Feature Sets - SVG 1.1 - 20030114" value="http://www.w3.org/TR/SVG/feature.html">
-
- </option><option label="The Single UNIX Specification, Version 3" value="http://www.unix-systems.org/version3/">
-
-</option></datalist>
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-	 <tr>
-
-      <td><label for="num">type="number"</label> 
-
-        <input type="number" id="num" step="2">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="dt">type="date and time"</label> 
-
-        <input type="datetime" id="dt">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="d">type="date"</label>
-
-        <input type="date" id="d">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="mo">type="month"</label>
-
-        <input type="month" id="mo">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="wk">type="week"</label> 
-
-        <input type="week" id="wk">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="dtl">type="datetime-local"</label>
-
-        <input type="datetime-local" id="dtl">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-	<tr>
-
-      <td><label for="ti">type="time"</label>
-
-        <input type="time" id="ti">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="slid">type="range"</label>
-
-        <input type="range" id="slid" value="10" min="1" max="11">  
-
-        <span class="new">new</span></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="col">type="color"</label>
-
-    <input type="color" id="col">  
-
-        <span class="new">new</span></td></tr>
-
-	<tr><td><label>select element <select name=""><option value="http://tools.ietf.org/html/rfc2045">
-
- </option><option value="http://www.w3.org/TR/html4/">HTML 4.01 Specification
-
- </option><option value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">Form Controls
-
- </option><option value="http://www.w3.org/TR/SVG/">Scalable Vector Graphics (SVG) 1.1 Specification
-
- </option><option value="http://www.w3.org/TR/SVG/feature.html">Feature Sets - SVG 1.1 - 20030114
-
- </option><option value="http://www.unix-systems.org/version3/">The Single UNIX Specification, Version 3
-
-</option></select></label></td></tr>
-
-      <tr><td><fieldset>
-
-        <legend>legend</legend>
-
-        <label for="tex"> label
-
-          <input name="input" type="text" id="tex">
-
-        </label>
-
-      </fieldset></td>
-
-    </tr>
-
-    <tr>
-
-      <td><label for="textfield">label using for/id</label>
-
-          <input type="text" name="textfield" id="textfield">      </td>
-
-    </tr>
-
-    <tr>
-
-      <td><label>label wrapped
-
-        <input type="text">
-
-      </label></td>
-
-    </tr>
-
-
- <tr>
-
-      <td><details><summary>details</summary><p>stuff inside the details container</p></details><span class="new">new</span></td>
-
-    </tr>
-
-<tr><td>
-
-	<p>Progress: <progress id="p" max="100" value="30" tabindex="0"><span>50</span>%</progress> 
-
-      <span class="new">new</span></p></td></tr>
-
-
-	<tr><td><p>An example of the <code>&lt;meter&gt;</code> element: <label id="label" for="meter">Your score is:</label>
-
-          <meter value="91" id="meter" min="0" max="100" low="40" high="90" optimum="100" tabindex="0"><span id="fallback1">A+</span></meter>  
-
-      <span class="new">new</span></p></td></tr>
-
- 
-
-</tbody></table></form>
-
-
-
-
-
-</body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>html5 interactive controls</title>
+    <style type="text/css">
+      body {
+        font: normal 85% arial, Verdana, helvetica, sans-serif;
+        color: #333;
+        background: #fff;
+        padding: 0 1em;
+      }
+
+      caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: large;
+      }
+
+      h1, h2 {
+        color: #630;
+        background: #fff;
+        padding-bottom: 0.5em;
+        margin-bottom: 0;
+      }
+
+      table {
+        font: normal 90% arial, Verdana, helvetica, sans-serif;
+      }
+
+      th, td {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.3em;
+        margin: 2px;
+        background-color: #f5f5f5;
+      }
+
+
+
+      td h1 {
+        font-size: 85%;
+        margin: 0;
+      }
+
+      thead th,
+      thead td {
+        font-weight: bold;
+        background-color: #f5f5f5;
+        text-align: center;
+      }
+
+      td span {
+        border: 2px solid #9acd32;
+        display: inline-block;
+        padding: 2px;
+      }
+
+      caption {
+        text-align: left;
+      }
+
+      td.support {
+        background: #90ee90;
+      }
+
+      td.partial {
+        background: #eee8aa;
+      }
+
+      td.nosupport {
+        background: #ffb6c1;
+      }
+
+      td p.note {
+        border: 1px dashed red;
+        padding: 5px;
+        margin-top: 5px;
+        background: #FFFFFF;
+      }
+
+      .new {
+        font-size: 1em;
+        background-color: #FF0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1> Nope.js UI library</h1>
+    <form action="">
+      <table id="results">
+        <tbody>
+          <tr>
+            <td><button>button element</button>    </td>
+          </tr>
+          <tr>
+            <td>input type=button <input type="button" value="input button"></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" value="" id="ch">
+              <label for="ch">type="checkbox"</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label> file input <input type="file"></label></td>
+          </tr>
+          <tr>
+            <td>input type='image' <input name="" type="image" src="http://www.html5accessibility.com/images/tick.png" alt="input type='image'"></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <label for="text0">type="text" required</label>
+                <input type="text" id="text0" required="">
+              </p>
+              <p>
+                <label for="text01">type="text" required 2</label>
+                <input type="text" id="text01" required="">
+              </p>
+
+              <p><input type="submit" value="submit"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="text1">type="text" with placeholder</label>
+              <input type="text" id="text1" placeholder="some text">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="form-2">Text with Datalist</label>
+              <input id="form-2" list="mylist" type="text">
+              <datalist id="mylist">
+                <option label="Miss" value="Miss"></option>
+                <option label="Mr" value="Mr"></option>
+                <option label="Ms" value="Ms"></option>
+                <option label="Prof" value="Mad Professor"></option>
+              </datalist><span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pass">type="password"</label>
+              <input type="password" id="pass">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" id="radio" value="">
+              <label for="radio">type="radio"</label>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="reset"></td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                textarea element
+
+                <textarea name="textarea" cols="10" rows="2" placeholder="some text"></textarea>
+                <span class="new">new</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="search">type="search"</label>
+              <input type="search" id="search">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mail">type="email"</label>
+              <input type="email" id="mail">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="t">type="tel"</label>
+              <input type="tel" id="t">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="url">type="URL"</label>
+              <input type="url" name="location" id="url" list="urls">
+              <datalist id="urls">
+                <option label="MIME: Format of Internet Message Bodies" value="http://tools.ietf.org/html/rfc2045"></option>
+                <option label="HTML 4.01 Specification" value="http://www.w3.org/TR/html4/"></option>
+                <option label="Form Controls" value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint"></option>
+                <option label="Scalable Vector Graphics (SVG) 1.1 Specification" value="http://www.w3.org/TR/SVG/"></option>
+                <option label="Feature Sets - SVG 1.1 - 20030114" value="http://www.w3.org/TR/SVG/feature.html"></option>
+                <option label="The Single UNIX Specification, Version 3" value="http://www.unix-systems.org/version3/"></option>
+              </datalist>
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="num">type="number"</label>
+              <input type="number" id="num" step="2">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dt">type="date and time"</label>
+              <input type="datetime" id="dt">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="d">type="date"</label>
+              <input type="date" id="d">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mo">type="month"</label>
+              <input type="month" id="mo">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="wk">type="week"</label>
+              <input type="week" id="wk">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dtl">type="datetime-local"</label>
+              <input type="datetime-local" id="dtl">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ti">type="time"</label>
+              <input type="time" id="ti">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="slid">type="range"</label>
+              <input type="range" id="slid" value="10" min="1" max="11">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="col">type="color"</label>
+              <input type="color" id="col">
+              <span class="new">new</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                select element <select name="">
+                  <option value="http://tools.ietf.org/html/rfc2045"></option>
+                  <option value="http://www.w3.org/TR/html4/">
+                    HTML 4.01 Specification
+
+                  </option>
+                  <option value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">
+                    Form Controls
+
+                  </option>
+                  <option value="http://www.w3.org/TR/SVG/">
+                    Scalable Vector Graphics (SVG) 1.1 Specification
+
+                  </option>
+                  <option value="http://www.w3.org/TR/SVG/feature.html">
+                    Feature Sets - SVG 1.1 - 20030114
+
+                  </option>
+                  <option value="http://www.unix-systems.org/version3/">
+                    The Single UNIX Specification, Version 3
+
+                  </option>
+                </select>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <fieldset>
+                <legend>legend</legend>
+                <label for="tex">
+                  label
+
+                  <input name="input" type="text" id="tex">
+                </label>
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="textfield">label using for/id</label>
+              <input type="text" name="textfield" id="textfield">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                label wrapped
+
+                <input type="text">
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><details><summary>details</summary><p>stuff inside the details container</p></details><span class="new">new</span></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Progress: <progress id="p" max="100" value="30" tabindex="0"><span>50</span>%</progress>
+                <span class="new">new</span>
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>
+                An example of the <code>&lt;meter&gt;</code> element: <label id="label" for="meter">Your score is:</label>
+                <meter value="91" id="meter" min="0" max="100" low="40" high="90" optimum="100" tabindex="0"><span id="fallback1">A+</span></meter>
+                <span class="new">new</span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

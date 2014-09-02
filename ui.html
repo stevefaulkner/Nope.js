@@ -1,105 +1,122 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	  <title>html5 interactive controls</title>
-	  <link rel="stylesheet" href="nope.css" type="text/css" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>html5 interactive controls</title>
+    <link rel="stylesheet" href="nope.css" type="text/css" charset="utf-8" />
   </head>
 
   <body>
     <h1>Nope.js UI library</h1>
     <form action="">
       <table id="results">
-      	<thead>
-	      	<tr>
-	      		<th>documentation</th>
-	      		<th>example</th>
-	      		<th>description</th>
-	      		<th>built in semantics?</th>
-	      		<th>built in keyboard support?</th>
-	      		<th> Browser support</th>
-	      	</tr>
-      	</thead>
+        <thead>
+          <tr>
+            <th>documentation</th>
+            <th>example</th>
+            <th>description</th>
+            <th>built in semantics?</th>
+            <th>built in keyboard support?</th>
+            <th> Browser support</th>
+          </tr>
+        </thead>
         <tbody>
-        	<!-- Anchor -->
-        	<tr>
-         		<td>
-         			<a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element"><code>a</code></a>
-         		</td>
+          <!-- Anchor -->
+          <tr>
             <td>
-            	<a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">hyperlink control</a>
+              <a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element"><code>a</code></a>
             </td>
             <td>
-            	This is a <a href="http://www.w3.org/html/wg/drafts/html/master/links.html#hyperlink">hyperlink</a> control, use it to link to other documents and document fragments.
+              <a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element">hyperlink control</a>
             </td>
             <td>
-            	<img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+              This is a <a href="http://www.w3.org/html/wg/drafts/html/master/links.html#hyperlink">hyperlink</a> control, use it to link to other documents and document fragments.
             </td>
             <td>
-            	<img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
             </td>
             <td>
-            	<img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
-            	<img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20"> ,
-            	<img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
-            	<img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
             </td>
           </tr>
           <!-- Button -->
           <tr>
-          	<td>
-          		<a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element"><code>button</code></a>
-          	</td>
             <td>
-            	<button>button element</button>
+              <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element"><code>button</code></a>
             </td>
             <td>
-            	This is a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element">button</a> control, use it to trigger an action on the page.
+              <button>button element</button>
             </td>
             <td>
-            	<img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+              This is a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-button-element">button</a> control, use it to trigger an action on the page.
             </td>
             <td>
-            	<img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
             </td>
             <td>
-            	<img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
-            	<img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20"> ,
-            	<img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
-            	<img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
-            </td>
-          </tr>
-          <!-- checkbox -->
-          <tr>
-          	<td>
-          		<a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#checkbox-state-(type=checkbox)"><code>checkbox</code></a>
-          	</td>
-            <td>
-            	<input type="checkbox">
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
             </td>
             <td>
-            	This is a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#checkbox-state-(type=checkbox)">checkbox</a> control, by default it's a 2-state control (checked/unchecked). It can be extended to a <a href="http://stevefaulkner.github.io/html-mapping-tests/browser-tests/checkbox-states.html">tri-state control</a> using the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#dom-input-indeterminate">indeterminate</a> IDL attribute. Use a checkbox only when it provides choices that are opposite and unambiguous. 
-            </td>
-            <td>
-            	<img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
-            </td>
-            <td>
-            	<img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
-            </td>
-            <td>
-            	<img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
-            	<img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20"> ,
-            	<img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
-            	<img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
+              <img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
             </td>
           </tr>
+          <!-- Checkbox -->
           <tr>
-            <td><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)"><code>radio button</code></a></td>
-            <td><input type="radio"></td>
-            <td> This is a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)">radio button</a> control, use it to provide users with a single choice from a number of options. </td>
-            <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes"></td>
-            <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes"></td>
-            <td><img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">, <img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20"> , <img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">, <img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20"></td>
+            <td>
+              <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#checkbox-state-(type=checkbox)"><code>checkbox</code></a>
+            </td>
+            <td>
+              <input type="checkbox">
+            </td>
+            <td>
+              This is a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#checkbox-state-(type=checkbox)">checkbox</a> control, by default it's a 2-state control (checked/unchecked). It can be extended to a <a href="http://stevefaulkner.github.io/html-mapping-tests/browser-tests/checkbox-states.html">tri-state control</a> using the <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#dom-input-indeterminate">indeterminate</a> IDL attribute. Use a checkbox only when it provides choices that are opposite and unambiguous. 
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
+            </td>
+          </tr>
+          <!-- Radiobutton -->
+          <tr>
+            <td>
+              <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)"><code>radio button</code></a>
+            </td>
+            <td>
+              <input type="radio" name="radiobuttongroup">
+              <input type="radio" name="radiobuttongroup">
+            </td>
+            <td>
+              This is a <a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#radio-button-state-(type=radio)">radio button</a> control, use it to provide users with a single choice from a number of options.
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="yes">
+            </td>
+            <td>
+              <img src="http://www.html5accessibility.com/images/firefox.png" alt="firefox" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/ie.png" alt="IE" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/chrome.png" alt="chrome" width="20" height="20">,
+              <img src="http://www.html5accessibility.com/images/safari.png" alt="safari" width="20" height="20">
+            </td>
           </tr>
           <!--
           <tr>
